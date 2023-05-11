@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>じゃんけんアプリ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>じゃんけんゲーム</h1>
+  <p id="record"></p>
+  <button id="reset" class="btn">成績をリセットする</button>
+
+  <button id="start" class="btn">スタート</button>
+  
+  <div class="select-player disabled">
+    <p>何人で対戦しますか？</p>
+    <select name="player-number" onchange="selectPlayer()">
+      <option>選択してください</option>
+      <option>2人</option>
+      <option>3人</option>
+      <option>4人</option>
+    </select>
+  </div>
+  
+  <div class="select-hand disabled">
+    <p>何を出しますか？</p>
+    <select name="select-hand" onchange="players[0].selectHand()">
+      <option>選択してください</option>
+      <option>グー</option>
+      <option>チョキ</option>
+      <option>パー</option>
+    </select>
+  </div>
+  
+  <div id="display-hand"></div>
+  <div id="display-result"></div>
+  
+  <button id="restart" class="btn disabled">再戦する</button>
+
+  <script src="js/player.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
